@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safara | Explore Incredible India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="preloader" class="intro-screen">
+    <div class="intro-content">
+      <div class="namaste-photo-wrap" aria-hidden="true">
+        <img
+          class="namaste-photo"
+          src="namaste-hand-posture-background/176035-OWSJVK-383.jpg"
+          alt=""
+        />
+      </div>
+      <p class="intro-kicker">Welcome to Incredible India</p>
+      <h1>Namaste</h1>
+      <p class="intro-copy">Discover journeys filled with heritage, color, culture, and unforgettable destinations.</p>
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <header class="header" id="top">
+    <nav class="container nav">
+      <a class="logo" href="#top">Safara</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">☰</button>
+      <ul id="navMenu" class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#planner">Planner</a></li>
+        <li><a href="#chat-support">Chat</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+    </nav>
+
+    <section class="hero container reveal">
+      <div>
+        <p class="tag">India Tourism App</p>
+        <h1>Safara — Plan Beautiful Trips Across India</h1>
+        <p>Professional animations, rich travel tools, and 18 fully integrated features to turn ideas into unforgettable journeys.</p>
+        <div class="hero-actions">
+          <a href="#planner" class="btn primary">Start Planning</a>
+          <a href="#features" class="btn ghost">Explore Features</a>
+          <a href="#chat-support" class="btn ghost">Chat Support</a>
+        </div>
+      </div>
+      <div class="hero-showcase">
+        <div class="hero-stats">
+          <div><strong>18</strong><span>Core Features</span></div>
+          <div><strong>28</strong><span>States & UTs</span></div>
+          <div><strong>365</strong><span>Days to Explore</span></div>
+        </div>
+        <div class="tourism-gallery" aria-label="Famous Indian tourism destinations">
+          <article class="tour-card float-card">
+            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=80" alt="Taj Mahal in Agra" />
+            <div class="tour-card-copy">
+              <h3>Taj Mahal</h3>
+              <p>Agra</p>
+            </div>
+          </article>
+          <article class="tour-card delay-card hawa-card">
+            <img src="https://images.unsplash.com/photo-1767158597961-bd58dccc16bd?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1400" alt="Hawa Mahal in Jaipur at sunset" />
+            <div class="tour-card-copy">
+              <h3>Hawa Mahal</h3>
+              <p>Jaipur</p>
+            </div>
+          </article>
+          <article class="tour-card rise-card">
+            <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=900&q=80" alt="Kerala backwaters with boats" />
+            <div class="tour-card-copy">
+              <h3>Kerala Backwaters</h3>
+              <p>Alappuzha</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="features" class="section container reveal">
+      <h2>18 Professional Features in Safara</h2>
+      <div class="feature-filter">
+        <input type="text" id="featureSearch" placeholder="Search a feature..." />
+      </div>
+      <div class="grid features-grid" id="featureGrid">
+      </div>
+    </section>
+
+    <section id="destinations" class="section alt reveal">
+      <div class="container">
+        <h2>Destination Finder</h2>
+        <div class="dest-controls">
+          <input id="destinationQuery" placeholder="e.g., beach, temple, mountains" />
+          <select id="regionFilter">
+            <option value="all">All Regions</option>
+            <option value="north">North</option>
+            <option value="south">South</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+            <option value="central">Central</option>
+          </select>
+        </div>
+        <div id="destinationResults" class="grid destination-grid"></div>
+      </div>
+    </section>
+
+    <section id="planner" class="section container reveal">
+      <h2>Smart Trip Planner</h2>
+      <div class="grid planner-grid">
+        <article class="card">
+          <h3>Itinerary Builder</h3>
+          <form id="itineraryForm">
+            <input id="cityInput" required placeholder="Add city (e.g., Jaipur)" />
+            <button class="btn primary" type="submit">Add Stop</button>
+          </form>
+          <ol id="itineraryList"></ol>
+        </article>
+
+        <article class="card">
+          <h3>Budget Calculator</h3>
+          <div class="stack">
+            <input id="days" type="number" min="1" value="5" placeholder="Days" />
+            <input id="dailySpend" type="number" min="500" value="3000" placeholder="Daily spend (INR)" />
+            <button id="calcBudget" class="btn primary">Calculate</button>
+            <p id="budgetResult"></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Currency Converter</h3>
+          <div class="stack">
+            <input id="inrAmount" type="number" value="10000" />
+            <select id="currencyType">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="AED">AED</option>
+            </select>
+            <button id="convertCurrency" class="btn primary">Convert</button>
+            <p id="convertResult"></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt reveal">
+      <div class="container">
+        <h2>Travel Utilities</h2>
+        <div class="grid planner-grid">
+          <article class="card">
+            <h3>Packing Checklist</h3>
+            <form id="packingForm" class="inline-form">
+              <input id="packingInput" placeholder="Add item" required />
+              <button class="btn primary" type="submit">Add</button>
+            </form>
+            <ul id="packingList"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Festival Calendar</h3>
+            <select id="festivalMonth">
+              <option value="all">All Months</option>
+              <option value="jan">January</option>
+              <option value="mar">March</option>
+              <option value="oct">October</option>
+              <option value="nov">November</option>
+            </select>
+            <ul id="festivalList"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Essential Phrases</h3>
+            <button id="nextPhrase" class="btn ghost">Show phrase</button>
+            <p id="phraseText">Namaste — Hello</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <h2>Traveler Stories</h2>
+      <article class="testimonial card" id="testimonialCard">
+        <p id="testimonialText"></p>
+        <h4 id="testimonialAuthor"></h4>
+      </article>
+    </section>
+
+    <section class="section alt reveal" id="faq">
+      <div class="container">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+          <button class="faq-q">Is Safara free to use?</button>
+          <p class="faq-a">Yes, the core planning experience is free for all travelers.</p>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I use Safara on mobile?</button>
+          <p class="faq-a">Absolutely. Safara is optimized for phones, tablets, and desktops.</p>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Does Safara support group trips?</button>
+          <p class="faq-a">Yes. Share itinerary plans and budgets with your travel group.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="chat-support" class="section container reveal">
+      <div class="chat-section-head">
+        <div>
+          <p class="tag">Always Available</p>
+          <h2>Customer Support Chat</h2>
+          <p>Ask for destination ideas, budget tips, trip plans, or help using the Safara website. The chat now runs from the same Safara server, so it opens with the website automatically.</p>
+        </div>
+        <a id="openFullChat" class="btn primary" href="/chat?theme=light" target="_blank" rel="noreferrer">Open Full Chat</a>
+      </div>
+
+      <article class="chat-embed card">
+        <div class="embedded-chat-shell">
+          <div class="embedded-chat-top">
+            <div>
+              <h3>Safara Assistant</h3>
+              <p id="chatStatus" class="chat-status">Checking chatbot connection...</p>
+            </div>
+          </div>
+
+          <section id="embeddedChatLog" class="embedded-chat-log" aria-live="polite"></section>
+
+          <form id="embeddedChatForm" class="embedded-chat-form">
+            <input id="embeddedMessageInput" type="text" placeholder="Ask about destinations, budgets, food, itineraries..." autocomplete="off" required />
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+
+          <div class="embedded-quick-row">
+            <button type="button" data-chat-question="Suggest a 5 day Rajasthan trip">5 day Rajasthan trip</button>
+            <button type="button" data-chat-question="Top 10 places in India">Top places</button>
+            <button type="button" data-chat-question="Best foods in India">Food ideas</button>
+            <button type="button" data-chat-question="How can I plan a budget friendly India trip?">Budget tips</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="section container reveal">
+      <h2>Plan with Safara</h2>
+      <form id="leadForm" class="card lead-form">
+        <input required id="leadName" placeholder="Your Name" />
+        <input required id="leadEmail" type="email" placeholder="Email Address" />
+        <textarea required id="leadMessage" placeholder="Tell us your dream India trip"></textarea>
+        <button class="btn primary" type="submit">Send Inquiry</button>
+        <p id="leadResult"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Safara. Crafted for incredible Indian tourism experiences.</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

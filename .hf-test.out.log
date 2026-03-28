@@ -1,0 +1,4 @@
+Safara chatbot server running.
+Open http://localhost:3011
+Using model: katanemo/Arch-Router-1.5B:hf-inference
+Provider mode: Hugging Face

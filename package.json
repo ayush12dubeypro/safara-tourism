@@ -1,0 +1,37 @@
+{
+  "name": "safara-tourism",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "@langchain/core": "^1.1.36",
+    "ansi-styles": "^5.2.0",
+    "base64-js": "^1.5.1",
+    "camelcase": "^6.3.0",
+    "chalk": "^5.6.2",
+    "console-table-printer": "^2.15.0",
+    "decamelize": "^1.2.0",
+    "eventemitter3": "^4.0.7",
+    "js-tiktoken": "^1.0.21",
+    "langsmith": "^0.5.15",
+    "mustache": "^4.2.0",
+    "openai": "^6.33.0",
+    "p-finally": "^1.0.0",
+    "p-queue": "^6.6.2",
+    "p-timeout": "^3.2.0",
+    "semver": "^7.7.4",
+    "simple-wcswidth": "^1.1.2",
+    "uuid": "^11.1.0",
+    "zod": "^4.3.6"
+  },
+  "scripts": {
+    "site": "node serve-static.cjs",
+    "chat": "node chatbot-server.mjs",
+    "start": "node start-all.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

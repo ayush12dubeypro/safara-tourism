@@ -1,0 +1,9 @@
+
+> safara-tourism@1.0.0 start
+> node chatbot-server.mjs
+
+Safara app server running.
+Website: http://127.0.0.1:3000
+Chat page: http://127.0.0.1:3000/chat
+Configured model: katanemo/Arch-Router-1.5B:hf-inference
+Provider mode: Hugging Face
